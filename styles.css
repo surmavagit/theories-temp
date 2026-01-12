@@ -1,0 +1,156 @@
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+    font-family: sans;
+
+    --border-color: hsl(0 0 90);
+
+    --year-width: 7ch;
+}
+
+body {
+    max-width: 70ch;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li>ul {
+    padding-inline-start: 3ch;
+}
+
+body>header,
+body>footer,
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1ch;
+    align-items: center;
+}
+
+body>nav {
+    border-block-end: solid var(--border-color);
+    margin-block-end: 1lh;
+}
+
+body>footer {
+    border-block-start: solid var(--border-color);
+    margin-block-start: 1lh;
+}
+
+article {
+    margin-block-start: 1lh;
+    border-block-start: solid var(--border-color);
+    padding-block-start: 1lh;
+}
+
+time {
+    display: block;
+    text-align: right;
+}
+
+nav>ul {
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+li,
+dd {
+    margin-block-end: 1ex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    font-family: serif;
+}
+
+.block {
+    display: block;
+}
+
+.year {
+    display: inline-block;
+    min-width: var(--year-width);
+}
+
+.textbox {
+    background-color: hsl(0 0 90);
+    padding-inline: 3ch;
+    padding-block: 1ch;
+    margin: 3ch;
+    font-style: italic;
+}
+
+#worklist span:last-child {
+    display: block;
+    margin-inline-start: var(--year-width);
+}
+
+#author-list li {
+    text-align: end;
+}
+
+#author-list .year {
+    text-align: start;
+}
+
+#author-list .year:first-of-type {
+    margin-inline-start: 3ch;
+}
+
+#author-list .authorname {
+    display: inline-block;
+    min-inline-size: 8ch;
+    max-inline-size: calc(100% - 18ch);
+    /* 18ch - the year columns */
+}
+
+.langcode {
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px;
+    font-family: monospace;
+    font-size: 1.5ch;
+    text-transform: capitalize;
+}
+
+.portrait {
+    display: block;
+    margin: auto;
+}
+
+#sub-title {
+    text-align: center;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: serif;
+    text-decoration: none;
+}
+
+#skip-link {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    background-color: white;
+}
+
+#skip-link:focus {
+    height: auto;
+    width: auto;
+    clip: auto;
+}
